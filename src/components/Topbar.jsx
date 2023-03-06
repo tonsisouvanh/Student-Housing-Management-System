@@ -17,7 +17,7 @@ const Topbar = () => {
         <div className="group cursor-pointer relative w-[40px]">
           <img
             className="w-full h-full rounded-full object-cover"
-            src="https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg"
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
             alt=""
           />
           <ul className="select-none outline-none absolute hidden z-10 group-hover:flex group-hover:flex-col  space-y-2 top-10 right-0 bg-white border shadow-md p-3 rounded-md">
