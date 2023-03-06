@@ -7,6 +7,7 @@ import StudentDetail from "./pages/StudentDetail/StudentDetail";
 import { ToastContainer } from "react-toastify";
 import Login from "./pages/Login";
 import { useSelector } from "react-redux";
+import Report from "./pages/Report";
 function App() {
   const { user: currentUser } = useSelector((state) => state.user);
 
@@ -53,6 +54,15 @@ function App() {
           element={
             <RequireAuth>
               <StudentDetail />
+            </RequireAuth>
+          }
+        />
+
+        <Route
+          path="/report"
+          element={
+            <RequireAuth>
+              <Report />
             </RequireAuth>
           }
         />

@@ -62,7 +62,7 @@ const Sidebar = () => {
 
         <div className="">
           <ul className="space-y-5 lg:text-lg">
-            <Link to="/students">
+            <Link to="/report">
               <li className="flex cursor-pointer transition hover:opacity-70 items-center gap-2">
                 <TbReportSearch className="text-xl" />
                 Report
