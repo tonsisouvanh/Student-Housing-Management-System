@@ -122,6 +122,27 @@ const Dashboard = ({ isLoading, students }) => {
                   </div>
                 </div>
               </div>
+
+              <div className="">
+                <div className="flex items-center px-5 py-6 shadow-sm rounded-md bg-white">
+                  <div className="p-3 rounded-full bg-cyan-600 bg-opacity-75">
+                    <FaInfoCircle className="h-8 w-8 text-white" />
+                  </div>
+
+                  <div className="mx-5">
+                    <h4 className="text-2xl font-semibold text-gray-700">
+                      {
+                        students.filter(
+                          (stu) =>
+                            stu.nation.toUpperCase() !== "LAO"
+                        ).length
+                      }
+                    </h4>
+                    <div className="text-gray-500">Foreigner</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
