@@ -1,6 +1,7 @@
 import React from "react";
-import { FaUsers, FaClipboardCheck, FaChartBar } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 import { BiMaleSign, BiFemaleSign } from "react-icons/bi";
+import { FaInfoCircle } from "react-icons/fa";
 const Dashboard = ({ isLoading, students }) => {
   if (isLoading) {
     return <h1>loading....</h1>;
@@ -62,58 +63,62 @@ const Dashboard = ({ isLoading, students }) => {
               <div className="">
                 <div className="flex items-center px-5 py-6 shadow-sm rounded-md bg-white">
                   <div className="p-3 rounded-full bg-green-600 bg-opacity-75">
-                    <FaClipboardCheck className="h-8 w-8 text-white" />
+                    <FaInfoCircle className="h-8 w-8 text-white" />
                   </div>
 
                   <div className="mx-5">
                     <h4 className="text-2xl font-semibold text-gray-700">
-                      214
+                      {
+                        students.filter(
+                          (stu) =>
+                            stu.nation.toUpperCase() === "LAO" &&
+                            stu.studyLevel.toUpperCase() === "ĐH"
+                        ).length
+                      }
                     </h4>
-                    <div className="text-gray-500">Tasks</div>
+                    <div className="text-gray-500">ĐẠI HỌC</div>
                   </div>
                 </div>
               </div>
 
               <div className="">
                 <div className="flex items-center px-5 py-6 shadow-sm rounded-md bg-white">
-                  <div className="p-3 rounded-full bg-yellow-600 bg-opacity-75">
-                    <FaChartBar className="h-8 w-8 text-white" />
+                  <div className="p-3 rounded-full bg-orange-600 bg-opacity-75">
+                    <FaInfoCircle className="h-8 w-8 text-white" />
                   </div>
+
                   <div className="mx-5">
                     <h4 className="text-2xl font-semibold text-gray-700">
-                      75.5%
+                      {
+                        students.filter(
+                          (stu) =>
+                            stu.nation.toUpperCase() === "LAO" &&
+                            stu.studyLevel.toUpperCase() === "THS"
+                        ).length
+                      }
                     </h4>
-                    <div className="text-gray-500 whitespace-nowrap">
-                      Conversion Rate
-                    </div>
+                    <div className="text-gray-500">THẠC SĨ</div>
                   </div>
                 </div>
               </div>
 
               <div className="">
                 <div className="flex items-center px-5 py-6 shadow-sm rounded-md bg-white">
-                  <div className="p-3 rounded-full bg-yellow-600 bg-opacity-75">
-                    <FaChartBar className="h-8 w-8 text-white" />
+                  <div className="p-3 rounded-full bg-cyan-600 bg-opacity-75">
+                    <FaInfoCircle className="h-8 w-8 text-white" />
                   </div>
-                  <div className="mx-5">
-                    <h4 className="text-2xl font-semibold text-gray-700">
-                      75.5%
-                    </h4>
-                    <div className="text-gray-500">Bachelor</div>
-                  </div>
-                </div>
-              </div>
 
-              <div className="">
-                <div className="flex items-center px-5 py-6 shadow-sm rounded-md bg-white">
-                  <div className="p-3 rounded-full bg-yellow-600 bg-opacity-75">
-                    <FaChartBar className="h-8 w-8 text-white" />
-                  </div>
                   <div className="mx-5">
                     <h4 className="text-2xl font-semibold text-gray-700">
-                      75.5%
+                      {
+                        students.filter(
+                          (stu) =>
+                            stu.nation.toUpperCase() === "LAO" &&
+                            stu.comment.toUpperCase() === "TỰ TÚC"
+                        ).length
+                      }
                     </h4>
-                    <div className="text-gray-500">Somorphore</div>
+                    <div className="text-gray-500">Tự túc</div>
                   </div>
                 </div>
               </div>

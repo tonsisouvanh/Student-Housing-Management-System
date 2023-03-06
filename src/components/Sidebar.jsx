@@ -1,11 +1,10 @@
 import { MdComputer } from "react-icons/md";
-import { AiOutlineRightCircle } from "react-icons/ai";
 import { SiVectorlogozone } from "react-icons/si";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { TbReportSearch } from "react-icons/tb";
-
+import { HiOutlineMenu } from "react-icons/hi";
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
 
@@ -23,15 +22,17 @@ const Sidebar = () => {
         open ? "py-5 px-8" : "p-4"
       } lg:p-6 lg:w-[300px]`}
     >
-      <AiOutlineRightCircle
-        onClick={() => setOpen(!open)}
-        className={`absolute cursor-pointer text-white bg-gray-900 h-[50px] rounded-md text-xl transition-all 
+      <div className="flex justify-end">
+        <HiOutlineMenu
+          onClick={() => setOpen(!open)}
+          className={`cursor-pointer text-white bg-gray-900 h-[50px] rounded-md text-xl transition-all 
         ${
           !open
             ? "top-[23px] right-[-10px]"
             : "rotate-180 top-[15px] right-[-10px]"
         } lg:hidden`}
-      />
+        />
+      </div>
       {/* Desktop sidebar */}
       <div className={`hidden lg:flex lg:flex-col lg:gap-5`}>
         <div className="relative">
