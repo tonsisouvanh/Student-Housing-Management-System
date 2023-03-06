@@ -1,9 +1,6 @@
 import React from "react";
 import {
-  FaUser,
-  FaCalendar,
-  FaGraduationCap,
-  FaChartLine,
+  FaUser
 } from "react-icons/fa";
 
 const Header = () => {

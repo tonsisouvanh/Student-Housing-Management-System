@@ -1,35 +1,30 @@
-import { deleteDoc, doc } from "firebase/firestore";
-import { deleteObject, getStorage, ref } from "firebase/storage";
-import React, { useContext, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { db } from "../firebase";
-import Modal from "./Modal";
 
-import { BsPersonSquare } from "react-icons/bs";
 import Paginate from "./Paginate";
 import { format } from "date-fns";
 
 const StudentCard = ({ studentsList, isLoading, handleSortClick, numbers }) => {
-  const idFoodRef = useRef();
-  const imgNameRef = useRef();
-  const [modal, setModal] = useState({
-    isLoading: false,
-    id: "",
-    img_name: "",
-  });
+  // const idFoodRef = useRef();
+  // const imgNameRef = useRef();
+  // const [modal, setModal] = useState({
+  //   isLoading: false,
+  //   id: "",
+  //   img_name: "",
+  // });
 
-  const handleModal = (isLoading, id, img_name) => {
-    setModal({
-      isLoading,
-      id,
-      img_name,
-    });
-  };
+  // const handleModal = (isLoading, id, img_name) => {
+  //   setModal({
+  //     isLoading,
+  //     id,
+  //     img_name,
+  //   });
+  // };
 
   const handleDelete = (id, img_name) => {
-    handleModal(true, id, img_name);
-    idFoodRef.current = id;
-    imgNameRef.current = img_name;
+    // handleModal(true, id, img_name);
+    // idFoodRef.current = id;
+    // imgNameRef.current = img_name;
   };
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -88,7 +83,8 @@ const StudentCard = ({ studentsList, isLoading, handleSortClick, numbers }) => {
                       {student.major}
                     </p>
                     <p className="text-gray-700 mb-2">
-                      <span className="font-medium">Status:</span> {student.comment}
+                      <span className="font-medium">Status:</span>{" "}
+                      {student.comment}
                     </p>
                   </div>
 

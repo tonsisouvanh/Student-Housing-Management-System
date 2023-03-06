@@ -1,8 +1,8 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, {  useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { loginUser, reset } from "../features/Auth/AuthSlice";
+import { loginUser } from "../features/Auth/AuthSlice";
 import { auth } from "../firebase";
 
 const Login = () => {

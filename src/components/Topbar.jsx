@@ -1,29 +1,10 @@
-import { getAuth, signOut } from "firebase/auth";
-import { useContext, useState } from "react";
-import { BsSearch } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-
-// import { getAuth, signOut } from "firebase/auth";
-// import { AuthContext } from "../context/AuthContext"
-
-import { useNavigate } from "react-router-dom";
 import { logoutUser } from "../features/Auth/AuthSlice";
 
 const Topbar = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleLogout = () => {
-    // const auth = getAuth();
-    // signOut(auth).then(() => {
-    //   // Sign-out successful.
-    //   dispatch(logoutUser())
-    //   sessionStorage.removeItem("user")
-    //   navigate("/login")
-    // }).catch((error) => {
-    //   // An error happened.
-    //   console.log(error.message)
-    // });
     dispatch(logoutUser());
   };
 

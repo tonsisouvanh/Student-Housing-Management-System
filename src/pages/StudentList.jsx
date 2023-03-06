@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import { Link, useActionData } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import FullSpinner from "../components/FullSpinner";
 import StudentTable from "../components/StudentTable";
 import { IoSearchCircleSharp } from "react-icons/io5";
 
@@ -18,19 +16,6 @@ const StudentList = () => {
   const [sortOrder, setSortOrder] = useState("asc");
   const [numbers, setNumbers] = useState(10);
 
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.pageYOffset > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     dispatch(getStudents());

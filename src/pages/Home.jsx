@@ -9,7 +9,6 @@ import { useSelector, useDispatch } from "react-redux";
 export const Home = () => {
   const dispatch = useDispatch();
   const { isLoading, students } = useSelector((state) => state.student);
-  const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(getStudents());

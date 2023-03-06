@@ -2,40 +2,36 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import FullSpinner from "./FullSpinner";
 import { colHeaders } from "../data/columnnames";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 import dateFormat from "dateformat";
 import Paginate from "./Paginate";
 import { RxCaretSort } from "react-icons/rx";
 import { IoMdTrash } from "react-icons/io";
 import { HiPencil } from "react-icons/hi";
 
-const StudentTable = ({
-  studentsList,
-  isLoading,
-  handleSortClick,
-  numbers,
-}) => {
-  const idFoodRef = useRef();
-  const imgNameRef = useRef();
-  const [modal, setModal] = useState({
-    isLoading: false,
-    id: "",
-    img_name: "",
-  });
+const StudentTable = ({studentsList,isLoading,handleSortClick,numbers,}) => {
 
-  const handleModal = (isLoading, id, img_name) => {
-    setModal({
-      isLoading,
-      id,
-      img_name,
-    });
-  };
+  // const idFoodRef = useRef();
+  // const imgNameRef = useRef();
+  // const [modal, setModal] = useState({
+  //   isLoading: false,
+  //   id: "",
+  //   img_name: "",
+  // });
 
-  const handleDelete = (id, img_name) => {
-    handleModal(true, id, img_name);
-    idFoodRef.current = id;
-    imgNameRef.current = img_name;
-  };
+  // const handleModal = (isLoading, id, img_name) => {
+  //   setModal({
+  //     isLoading,
+  //     id,
+  //     img_name,
+  //   });
+  // };
+
+  // const handleDelete = (id, img_name) => {
+  //   handleModal(true, id, img_name);
+  //   idFoodRef.current = id;
+  //   imgNameRef.current = img_name;
+  // };
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -178,7 +174,7 @@ const StudentTable = ({
         />
       </div>
 
-      {modal.isLoading && (
+      {/* {modal.isLoading && (
         <Modal
           title={"Remove food"}
           message={"Are you sure you want to remove this item"}
@@ -186,7 +182,7 @@ const StudentTable = ({
           // onModal={areUSureDelete}
           isLoading={modal.isLoading}
         />
-      )}
+      )} */}
     </>
   );
 };

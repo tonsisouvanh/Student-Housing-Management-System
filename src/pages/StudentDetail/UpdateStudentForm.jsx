@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Timestamp } from "firebase/firestore";
-
+import Modal
 import {
   getStudent,
   updateStudent,
@@ -11,7 +11,6 @@ import {
 import { format } from "date-fns";
 import { studentInputs } from "../../data/columnnames";
 import FullSpinner from "../../components/FullSpinner";
-import Modal from "../../components/Modal";
 
 import { toast } from "react-toastify";
 
@@ -25,7 +24,7 @@ const UpdateStudentForm = ({ id }) => {
     return date.toISOString().substr(0, 10);
   };
 
-  const { isLoading, isSuccess, isError, studentDetail } = useSelector(
+  const { isSuccess, isError, studentDetail } = useSelector(
     (state) => state.student
   );
   const dispatch = useDispatch();
@@ -238,7 +237,7 @@ const UpdateStudentForm = ({ id }) => {
           )}
         </div>
       </form>
-      {/* {modal && (
+      {modal && (
         <Modal
           title={"Update Student"}
           message={"Are you sure you want to update this student"}
@@ -248,7 +247,7 @@ const UpdateStudentForm = ({ id }) => {
           actionText={"Save"}
           actionBgColor={"bg-green-"}
         />
-      )} */}
+      )}
     </div>
   );
 };

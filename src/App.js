@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Counter } from "./features/counter/Counter";
+import React from "react";
 import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
@@ -7,8 +6,7 @@ import StudentList from "./pages/StudentList";
 import StudentDetail from "./pages/StudentDetail/StudentDetail";
 import { ToastContainer } from "react-toastify";
 import Login from "./pages/Login";
-import { useDispatch, useSelector } from "react-redux";
-
+import { useSelector } from "react-redux";
 function App() {
   const { user: currentUser } = useSelector((state) => state.user);
 
