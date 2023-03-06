@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FullSpinner from "./FullSpinner";
 import { colHeaders } from "../data/columnnames";
@@ -9,8 +9,12 @@ import { RxCaretSort } from "react-icons/rx";
 import { IoMdTrash } from "react-icons/io";
 import { HiPencil } from "react-icons/hi";
 
-const StudentTable = ({studentsList,isLoading,handleSortClick,numbers,}) => {
-
+const StudentTable = ({
+  studentsList,
+  isLoading,
+  handleSortClick,
+  numbers,
+}) => {
   // const idFoodRef = useRef();
   // const imgNameRef = useRef();
   // const [modal, setModal] = useState({

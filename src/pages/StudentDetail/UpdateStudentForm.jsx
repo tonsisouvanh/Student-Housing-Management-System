@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Timestamp } from "firebase/firestore";
-import Modal
+import Modal from '../../components/Modal'
 import {
   getStudent,
   updateStudent,
