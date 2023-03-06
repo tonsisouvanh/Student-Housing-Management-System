@@ -1,8 +1,7 @@
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
-import { auth } from "../../firebase";
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 
 // Create new user
 const loginUser = async (userData) => {
