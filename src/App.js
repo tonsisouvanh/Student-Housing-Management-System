@@ -59,7 +59,7 @@ function App() {
         />
 
         <Route
-          path="/#"
+          path="/report"
           element={
             <RequireAuth>
               <Report />
