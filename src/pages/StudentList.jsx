@@ -16,7 +16,6 @@ const StudentList = () => {
   const [sortOrder, setSortOrder] = useState("asc");
   const [numbers, setNumbers] = useState(10);
 
-
   useEffect(() => {
     dispatch(getStudents());
     dispatch(reset());
@@ -65,7 +64,9 @@ const StudentList = () => {
       {/* Right side content */}
       <div className="w-full overflow-hidden p-5 flex flex-col gap-2">
         <Topbar />
-        <div className={`flex flex-col items-start gap-2 bg-gray-100 p-3 rounded-lg md:flex-row md:items-center md:justify-between`}>
+        <div
+          className={`flex flex-col items-start gap-2 bg-gray-100 p-3 rounded-lg md:flex-row md:items-center md:justify-between`}
+        >
           <div className="flex items-center text-gray-600">
             <label htmlFor="sort-select" className="mr-2 whitespace-nowrap">
               Show:
@@ -99,6 +100,8 @@ const StudentList = () => {
               </div>
             </div>
           </div>
+
+          <button className="btn btn-active">ADD</button>
         </div>
 
         {/* Mobile view */}

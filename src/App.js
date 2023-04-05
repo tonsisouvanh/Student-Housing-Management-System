@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import Login from "./pages/Login";
 import { useSelector } from "react-redux";
 import Report from "./pages/Report";
+import Test from "./pages/Test";
 function App() {
   const { user: currentUser } = useSelector((state) => state.user);
 
@@ -57,12 +58,19 @@ function App() {
             </RequireAuth>
           }
         />
-
         <Route
           path="/report"
           element={
             <RequireAuth>
               <Report />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/test"
+          element={
+            <RequireAuth>
+              <Test />
             </RequireAuth>
           }
         />

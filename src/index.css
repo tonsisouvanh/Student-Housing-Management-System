@@ -14,12 +14,12 @@
 }
 
 * {
-  -webkit-tap-highlight-color: transparent; /* Safari */
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari, Chrome, Opera */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version */
+  /*-webkit-tap-highlight-color: transparent; /* Safari */
+  /*-webkit-touch-callout: none; /* iOS Safari */
+  /*-webkit-user-select: none; /* Safari, Chrome, Opera */
+  /*-moz-user-select: none; /* Firefox */
+  /*-ms-user-select: none; /* Internet Explorer/Edge */
+  /*user-select: none; /* Non-prefixed version */
 }
 
 body {
