@@ -83,6 +83,10 @@ const StudentCard = ({ studentsList, isLoading, handleSortClick, numbers }) => {
                       {student.major}
                     </p>
                     <p className="text-gray-700 mb-2">
+                      <span className="font-medium">Room:</span>{" "}
+                      {student.room}
+                    </p>
+                    <p className="text-gray-700 mb-2">
                       <span className="font-medium">Status:</span>{" "}
                       {student.comment}
                     </p>

@@ -21,7 +21,7 @@ const Paginate = ({
       >
         <li
           onClick={previousPage}
-          className="btn py-[2px] px-1 text-[10px]"
+          className="btn py-[2px] px-1 text-[10px] lg:text-[16px] lg:px-4"
           // className="text-xs cursor-pointer px-2 py-1 ml-0 leading-tight text-gray-500 bg-white border border-gray-400 rounded-l-lg hover:bg-gray-100 hover:text-gray-700  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
         >
           Prev
@@ -42,7 +42,7 @@ const Paginate = ({
           <li
             key={number}
             onClick={() => paginate(number)}
-            className={` py-1 px-1 text-[10px]
+            className={` py-1 px-1 text-[10px] lg:text-[16px] lg:px-4
             ${
               currentPage === number
                 ? "dark:bg-gray-700 text-white"
@@ -59,7 +59,7 @@ const Paginate = ({
         ))}
         <li
           onClick={nextPage}
-          className="btn py-1 px-1 text-[10px]"
+          className="btn py-1 px-1 text-[10px] lg:text-[16px] lg:px-4"
           // className="text-xs cursor-pointer px-2 py-1 ml-0 leading-tight text-gray-500 bg-white border border-gray-400 rounded-r-lg hover:bg-gray-100 hover:text-gray-700  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
         >
           Next
