@@ -7,6 +7,7 @@ import { IoSearchCircleSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { getStudents, reset } from "../features/Student/StudentSlice";
 import StudentCard from "../components/StudentCard";
+import { Link } from "react-router-dom";
 
 const StudentList = () => {
   const dispatch = useDispatch();
@@ -101,7 +102,9 @@ const StudentList = () => {
             </div>
           </div>
 
-          <button className="btn btn-active">ADD</button>
+          <Link to="/add-student">  
+            <button className="btn btn-active">ADD</button>
+          </Link>
         </div>
 
         {/* Mobile view */}
