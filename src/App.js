@@ -9,7 +9,8 @@ import Login from "./pages/Login";
 import { useSelector } from "react-redux";
 import Report from "./pages/Report";
 import Test from "./pages/Test";
-import AddStudentForm from "./pages/StudentDetail/AddStudentForm";
+
+import AddStudent from "./pages/AddStudent/AddStudent";
 function App() {
   const { user: currentUser } = useSelector((state) => state.user);
 
@@ -64,7 +65,7 @@ function App() {
           path="/add-student"
           element={
             <RequireAuth>
-              <AddStudentForm />
+              <AddStudent />
             </RequireAuth>
           }
         />
